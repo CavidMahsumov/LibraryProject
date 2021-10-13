@@ -54,7 +54,7 @@ namespace LibraryProject
                 conn.Open();
                 transaction = conn.BeginTransaction();
                 ++count;
-                SqlCommand command = new SqlCommand("sp_CheckStudent", conn);
+                SqlCommand command = new SqlCommand("sp_CheckStudents", conn);
                 command.CommandType = CommandType.StoredProcedure;
 
                
@@ -78,6 +78,8 @@ namespace LibraryProject
                 {
                     command.ExecuteNonQuery();
                     transaction.Commit();
+                    TakeBook takeBook = new TakeBook();
+                    GGrid.Children.Add(takeBook);
                    
 
                 }

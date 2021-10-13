@@ -6,33 +6,36 @@
         xmlns:local="clr-namespace:LibraryProject"
         mc:Ignorable="d"
         Title="MainWindow" Height="445" Width="715">
-    <Grid Name="Grid1">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="8.5*"/>
-            <ColumnDefinition Width="5.5*"/>
-            <ColumnDefinition Width="0.5*"/>
-        </Grid.ColumnDefinitions>
+    <Grid x:Name="GGrid">
+        <Grid Name="Grid1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="8.5*"/>
+                <ColumnDefinition Width="5.5*"/>
+                <ColumnDefinition Width="0.5*"/>
+            </Grid.ColumnDefinitions>
 
-        <Grid.RowDefinitions>
-            <RowDefinition/>
-            <RowDefinition Height="1.6*"/>
-            <RowDefinition Height="0.7*"/>
-        </Grid.RowDefinitions>
-        <Image Source="Photos/w1.jpg" 
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition Height="1.6*"/>
+                <RowDefinition Height="0.7*"/>
+            </Grid.RowDefinitions>
+            <Image Source="Photos/w1.jpg" 
                Grid.ColumnSpan="3"
                Grid.RowSpan="3"
                ></Image>
-        <Grid x:Name="MainGrid" Background="#2e2b30" Grid.Row="1" Grid.Column="1">
-            <StackPanel>
-                <TextBlock FontSize="20" Margin="90,10,0,0" Foreground="White" Text="Sign In"></TextBlock>
+            <Grid x:Name="MainGrid" Background="#2e2b30" Grid.Row="1" Grid.Column="1">
+                <StackPanel>
+                    <TextBlock FontSize="20" Margin="90,10,0,0" Foreground="White" Text="Sign In"></TextBlock>
 
-                <TextBox Template="{StaticResource TextBoxBaseControlTemplate}" x:Name="FirstNametxtBox" Width="200" Height="25" Margin="10,16,10,10"></TextBox>
-                <TextBox Template="{StaticResource TextBoxBaseControlTemplate }"  x:Name="passwordtxtbox" Width="200" Height="25" Margin="10,10,10,10"></TextBox>
-                <Button Click="SubmitBtn_Click"  Style="{StaticResource InformButton}"   x:Name="SubmitBtn" Height="25" Foreground="White" Content="Submit" Margin="10,5,10,0" >
+                    <TextBox Template="{StaticResource TextBoxBaseControlTemplate}" x:Name="FirstNametxtBox" Width="200" Height="25" Margin="10,16,10,10"></TextBox>
+                    <TextBox Template="{StaticResource TextBoxBaseControlTemplate }"  x:Name="passwordtxtbox" Width="200" Height="25" Margin="10,10,10,10"></TextBox>
+                    <Button Click="SubmitBtn_Click"  Style="{StaticResource InformButton}"   x:Name="SubmitBtn" Height="25" Foreground="White" Content="Submit" Margin="10,5,10,0" >
 
-                </Button>
-            </StackPanel>
+                    </Button>
+                </StackPanel>
+            </Grid>
+
         </Grid>
-        
     </Grid>
+
 </Window>
